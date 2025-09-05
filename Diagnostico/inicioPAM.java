@@ -78,9 +78,33 @@ class InterfazPAM extends JFrame {
         panelBotones.add(btnLineamientos);
         panelBotones.add(btnFechas);
         panelBotones.add(btnPorcentajes);
-        
+
         panelPrincipal.add(panelBotones, BorderLayout.CENTER);
         
         add(panelPrincipal);
+
+        btnReglamento.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(InterfazPAM.this, pam.ReglamentoPOO(), "Reglamento POO", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+        
+        btnLineamientos.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(InterfazPAM.this, pam.LineamientosClassroom(), "Lineamientos Classroom", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+        
+        btnFechas.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(InterfazPAM.this, pam.FechasdeParciales(), "Fechas de Parciales", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+        
+        btnPorcentajes.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(InterfazPAM.this, pam.PorcentajesporParcial(), "Porcentajes por Parcial", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
      }
 }
