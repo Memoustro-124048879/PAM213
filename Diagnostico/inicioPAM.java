@@ -53,4 +53,10 @@ class InterfazPAM extends JFrame {
     private JButton btnFechas;
     private JButton btnPorcentajes;
     private inicioPAM pam;
+
+     public InterfazPAM() {
+        pam = new inicioPAM();
+        setTitle("Sistema de Información PAM");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     }
 }
