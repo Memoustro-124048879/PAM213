@@ -1,3 +1,7 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
 public class inicioPAM {
     public String ReglamentoPOO(){
         return "1.Se requiere 80% de asistencia para tener derecho a evaluación parcial y 80% de trabajos en clase.\r\n" + //
@@ -31,5 +35,14 @@ public class inicioPAM {
          return "1P: Evidencia de conocimiento(40%), Evidencia de desempeño(20%), Evidencia de producto(30%), Proyecto integrador(10%)\r\n" + //
         "2P: Evidencia de conocimiento(40%), Evidencia de desempeño(20%), Evidencia de producto(20%), Proyecto integrador(20%)\r\n" + //
         "3P: Evidencia de conocimiento(20%), Evidencia de desempeño(10%), Evidencia de producto(40%), Proyecto integrador(30%)";
+    }
+public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                InterfazPAM interfaz = new InterfazPAM();
+                interfaz.setSize(650, 500);
+                interfaz.setVisible(true);
+            }
+        });
     }
 }
