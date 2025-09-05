@@ -46,3 +46,11 @@ public static void main(String[] args) {
         });
     }
 }
+
+class InterfazPAM extends JFrame {
+    private JButton btnReglamento;
+    private JButton btnLineamientos;
+    private JButton btnFechas;
+    private JButton btnPorcentajes;
+    private inicioPAM pam;
+}
