@@ -67,5 +67,20 @@ class InterfazPAM extends JFrame {
         btnLineamientos = new JButton("Lineamientos Classroom");
         btnFechas = new JButton("Fechas de Parciales");
         btnPorcentajes = new JButton("Porcentajes por Parcial");
+
+        Dimension buttonSize = new Dimension(150, 50);
+        btnReglamento.setPreferredSize(buttonSize);
+        btnLineamientos.setPreferredSize(buttonSize);
+        btnFechas.setPreferredSize(buttonSize);
+        btnPorcentajes.setPreferredSize(buttonSize);
+        
+        panelBotones.add(btnReglamento);
+        panelBotones.add(btnLineamientos);
+        panelBotones.add(btnFechas);
+        panelBotones.add(btnPorcentajes);
+        
+        panelPrincipal.add(panelBotones, BorderLayout.CENTER);
+        
+        add(panelPrincipal);
      }
 }
