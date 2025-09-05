@@ -58,5 +58,14 @@ class InterfazPAM extends JFrame {
         pam = new inicioPAM();
         setTitle("Sistema de Información PAM");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panelPrincipal = new JPanel(new BorderLayout());
+        JPanel panelBotones = new JPanel(new GridLayout(2, 2, 10, 10));
+        panelBotones.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+       
+        btnReglamento = new JButton("Reglamento POO");
+        btnLineamientos = new JButton("Lineamientos Classroom");
+        btnFechas = new JButton("Fechas de Parciales");
+        btnPorcentajes = new JButton("Porcentajes por Parcial");
      }
 }
