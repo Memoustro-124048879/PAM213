@@ -1,6 +1,19 @@
+// estoy creando variable
+
 var nameuser = "john";
 let lastname = "carter";
 
+// reasignando el valor de la variable nameuser
+
 nameuser = "pepe";
 
-console.log(nameuser)
+// cualquiercosas
+
+
+
+const PI = 3.1415;
+
+console.log(PI)
+
+// camelcase
+let userName = "gordon";
