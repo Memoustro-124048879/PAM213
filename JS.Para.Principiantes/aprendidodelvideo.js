@@ -1,6 +1,6 @@
-let numberOne = 60;
-let numberTwo = 100;
+let name = 'John';
+let lastname = 'Carter';
 
-let result = numberOne + numberTwo;
+let completeName = name + lastname;
 
-console.log(result);
+console.log(completeName);
