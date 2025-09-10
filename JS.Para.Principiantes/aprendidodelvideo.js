@@ -1,4 +1,6 @@
 var nameuser = "john";
 let lastname = "carter";
 
-console.log(lastname)
+nameuser = "pepe";
+
+console.log(nameuser)
