@@ -1,10 +1,6 @@
-let typeCard = 'Debid Card';
+let count = 50;
 
-switch(typeCard){
-    case 'Debid Card':
-        console.log('This is a debid card');
-        break;
-    case 'Credit Card':
-        console.log('This is a credit card');
-        break;
+while (count > 0){
+    console.log(count);
+    count = count - 1;
 }
