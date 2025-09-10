@@ -1,19 +1,6 @@
-// estoy creando variable
+let numberOne = 60;
+let numberTwo = 100;
 
-var nameuser = "john";
-let lastname = "carter";
+let result = numberOne + numberTwo;
 
-// reasignando el valor de la variable nameuser
-
-nameuser = "pepe";
-
-// cualquiercosas
-
-
-
-const PI = 3.1415;
-
-console.log(PI)
-
-// camelcase
-let userName = "gordon";
+console.log(result);
