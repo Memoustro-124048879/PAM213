@@ -6,3 +6,7 @@ const persona ={
         pais:'MX'
     }
 };
+
+
+const{nombre,edad,direccion}= persona;
+console.log('Me llamo '+nombre+', tengo '+edad+',vivo en '+ direccion.ciudad);
