@@ -8,7 +8,7 @@ function simularPeticionAPI(){
 
 async function obtenerDatos() {
     try{
-        const respuesta = await (simularPeticionAPI) ;
+        const respuesta = await simularPeticionAPI() ;
 
         console.log('Proceso terminado');
         console.log('Resultado de la petición:', respuesta);
