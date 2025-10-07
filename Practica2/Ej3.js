@@ -13,3 +13,8 @@ personas.forEach(personas=>{console.log(personas)});
 console.log('');
 const SumEd=personas.reduce((resultado, personas) => resultado+personas.edad,0);
 console.log(SumEd);
+
+
+const suma=personas.forEach(n=>personas.edad+n);
+
+console.log(suma);
