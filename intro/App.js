@@ -1,5 +1,5 @@
 
-import ContadorScreen from './screens/contadorScreen';
+import ContadorScreen from './screens/ContadorScreen';
 
 export default function App() {
 
