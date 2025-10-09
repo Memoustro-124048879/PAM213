@@ -1,6 +1,7 @@
 //1. imports: Zona de importaciones
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import React,{useState}from 'react';
 
 //2. Main: Zona de componentes
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
      {/*  <Button></Button> */}
       <Button title="Agregar"/> {/* Otra forma de agregar un boton */}
       <StatusBar style="auto" />
+
     </View>
   );
 }
