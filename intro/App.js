@@ -13,6 +13,8 @@ export default function App() {
       <Text> Contador: {contador} </Text> {/* soy un comentario */}
      {/*  <Button></Button> */}
       <Button title="Agregar" onPress={()=>setContador(contador+1)}/> {/* Otra forma de agregar un boton */}
+      <Button title="Quitar" onPress={()=>setContador(contador-1)}/> {/* Desminuimos al contador */}
+      <Button title="Reiniciar" onPress={()=>setContador(contador-contador)}/> {/* Reiniciamos el contador */}
       <StatusBar style="auto" />
 
     </View>
