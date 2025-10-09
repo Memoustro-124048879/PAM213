@@ -14,7 +14,7 @@ export default function App() {
      {/*  <Button></Button> */}
       <Button title="Agregar" onPress={()=>setContador(contador+1)}/> {/* Otra forma de agregar un boton */}
       <Button title="Quitar" onPress={()=>setContador(contador-1)}/> {/* Desminuimos al contador */}
-      <Button title="Reiniciar" onPress={()=>setContador(contador-contador)}/> {/* Reiniciamos el contador */}
+      <Button title="Reiniciar" onPress={()=>setContador(0)}/> {/* Reiniciamos el contador */}
       <StatusBar style="auto" />
 
     </View>
