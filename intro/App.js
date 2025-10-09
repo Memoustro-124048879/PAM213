@@ -5,11 +5,14 @@ import React,{useState}from 'react';
 
 //2. Main: Zona de componentes
 export default function App() {
+
+  const [contador,setContador]=useState(0); /* Destructuración */
+
   return (
     <View style={styles.container}>
-      <Text> Contador: </Text> {/* soy un comentario */}
+      <Text> Contador: {contador} </Text> {/* soy un comentario */}
      {/*  <Button></Button> */}
-      <Button title="Agregar"/> {/* Otra forma de agregar un boton */}
+      <Button title="Agregar" onPress={()=>setContador(contador+1)}/> {/* Otra forma de agregar un boton */}
       <StatusBar style="auto" />
 
     </View>
