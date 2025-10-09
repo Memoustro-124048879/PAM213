@@ -10,13 +10,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text> Contador: {contador} </Text> {/* soy un comentario */}
-     {/*  <Button></Button> */}
-      <Button title="Agregar" onPress={()=>setContador(contador+1)}/> {/* Otra forma de agregar un boton */}
+      <Text style={styles.texto}> Contador:</Text> 
+      <Text style={styles.numer}> {contador} </Text> 
+     
+      <Button title="Agregar" onPress={()=>setContador(contador+1)}  style={styles.cuadro}/> {/* Otra forma de agregar un boton */}
       <Button title="Quitar" onPress={()=>setContador(contador-1)}/> {/* Desminuimos al contador */}
       <Button title="Reiniciar" onPress={()=>setContador(0)}/> {/* Reiniciamos el contador */}
       <StatusBar style="auto" />
-
     </View>
   );
 }
@@ -25,8 +25,25 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#6f0cdfff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center',  
   },
+  texto:{
+    color:'yellow',
+    fontSize: 30,
+    fontFamily: 'Times New Roman',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+    textDecorationLine: 'line-through'
+  },
+  numer:{
+    color:'orange',
+    fontSize: 35,
+    fontFamily: 'Courier',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    textDecorationLine: 'underline'
+  }
 });
+
