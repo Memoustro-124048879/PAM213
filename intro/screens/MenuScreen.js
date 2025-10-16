@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View } from 'react-native'
+import { Text, StyleSheet, View, Button } from 'react-native'
 import React, { use, useState } from 'react'
 import contadorScreen from './contadorScreen'
 import BotonesSceen from './BotonesSceen'
@@ -12,13 +12,15 @@ export default function MenuScreen() {
             return <contadorScreen/>
         case 'botones':
             return <BotonesSceen/>
-    }
-
-    return (
-      <View>
-        <Text>MenuScreen</Text>
-      </View>
-    )
+        case 'menu':
+            default:
+                return (
+                    <View>
+                        <Text>Menu de Practicas</Text>
+                        <Button title='Pract: Contador' onPress={()=>setScreen('contador')}/>
+                    </View>
+                )
+    }  
   }
 
 const styles = StyleSheet.create({})
