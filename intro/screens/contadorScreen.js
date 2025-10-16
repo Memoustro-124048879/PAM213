@@ -13,7 +13,7 @@ export default function App() {
       <Text style={styles.texto}> Contador:</Text> 
       <Text style={styles.numer}> {contador} </Text> 
         <View style={styles.botonesContainer}>
-      <Button color='red' title="Agregar" onPress={()=>setContador(contador+1)}  style={styles.cuadro}/> {/* Otra forma de agregar un boton */}
+      <Button color='red' title="Agregar" onPress={()=>setContador(contador+1)}/> {/* Otra forma de agregar un boton */}
       <Button color='blue' title="Quitar" onPress={()=>setContador(contador-1)}/> {/* Desminuimos al contador */}
       <Button color='green' title="Reiniciar" onPress={()=>setContador(0)}/> {/* Reiniciamos el contador */}
         </View>
