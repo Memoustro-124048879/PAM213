@@ -1,15 +1,15 @@
 import { Text, StyleSheet, View } from 'react-native'
 
-export default function BotonesScreen()  {
+export default function ISScreen()  {
     return (
       <View style={styles.container}>
-        <Text style={styles.texto}>Proximamente por Jose Maria & equipo</Text>
+        <Text style={styles.texto}>Proximamente por Guillermo & equipo</Text>
       </View>
     )
   }
 
 const styles = StyleSheet.create({
-  texto:{
+    texto:{
     color:'#a409c0ff',
     fontSize: 30,
     fontFamily: 'Times New Roman',
