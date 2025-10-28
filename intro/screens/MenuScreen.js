@@ -9,6 +9,7 @@ import AIScreen from './AIScreen'
 import FSLScreen from './FSLScreen'
 import ModalScreen from './ModalScreen'
 import BSScreen from './BSScreen'
+import RepasoScreen from './RepasoScreen'
 
 
 export default function MenuScreen() {
@@ -34,6 +35,8 @@ export default function MenuScreen() {
         return <ModalScreen />;
       case 'bottom sheet':
         return <BSScreen />;
+      case 'repaso':
+        return <RepasoScreen />;
       case 'menu':
           default:
             return (
@@ -49,6 +52,7 @@ export default function MenuScreen() {
                     <Button title='Pract: FlatList y Section List' onPress={()=>setScreen('flatList y section list')}/>
                     <Button title='Pract: Modal ' onPress={()=>setScreen('modal')}/>
                     <Button title='Pract: Bottom Sheet ' onPress={()=>setScreen('bottom sheet')}/>
+                    <Button title='Pract: Repaso ' onPress={()=>setScreen('repaso')}/>
                   </View>
                 </View>
               )
