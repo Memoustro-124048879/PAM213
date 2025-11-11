@@ -1,25 +1,83 @@
-import { Text, StyleSheet, View } from 'react-native'
+import React, { useState } from 'react';
+import { Text, StyleSheet, View, Button, ActivityIndicator } from 'react-native';
 
-export default function AIScreen()  {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.texto}>Proximamente por Oscar & equipo</Text>
+export default function AIScreen() {
+  const [cargando, setCargando] = useState(false);
+  const [mostrarContenido, setMostrarContenido] = useState(false);
+  const [mensajePrompt, setMensajePrompt] = useState('Presiona "Acción" para comenzar');
+
+  const manejarCarga = () => {
+    setCargando(true);
+    setMostrarContenido(false);
+    setMensajePrompt('Cargando... por favor espera');
+
+    setTimeout(() => {
+      setCargando(false);
+      setMostrarContenido(true);
+      setMensajePrompt('¡Acción completada!');
+    }, 5000);
+  };
+  const cancelarCarga = () => {
+    setCargando(false);
+    setMostrarContenido(false);
+    setMensajePrompt('Carga cancelada');
+  };
+
+  return (
+    <View style={styles.contenedor}>
+      <Text style={styles.titulo}>Practica: Activity Indicator</Text>
+      <Text style={styles.prompt}>{mensajePrompt}</Text>
+
+      <View style={styles.botones}>
+        <Button color="#fb5c97ff" title="Acción" onPress={manejarCarga} />
+        <View style={{ width: 10 }} />
+        <Button color="#868585ff" title="Cancelar" onPress={cancelarCarga} /> 
       </View>
-    )
-  }
 
+      {cargando && (
+        <ActivityIndicator
+          size="large"
+          color="#ff4805ff"
+          style={styles.indicador}
+        />
+      )}
+
+      {mostrarContenido && (
+        <Text style={styles.contenido}> ¡¡ Acción realizada :D!!</Text>
+      )}
+    </View>
+  );
+}
 const styles = StyleSheet.create({
-    texto:{
-    color:'#a409c0ff',
-    fontSize: 30,
-    fontFamily: 'Times New Roman',
-    fontWeight: 'bold',
-    fontStyle: 'italic',
-  },
-  container: {
+  contenedor: {
     flex: 1,
-    backgroundColor: '#000000ff',
+    justifyContent: 'center',
     alignItems: 'center',
-    justifyContent: 'center',  
-  }
-})
+    padding: 20,
+    backgroundColor: '#ffffffff',
+  },
+  titulo: {
+    fontSize: 24,
+    marginBottom: 10,
+    fontWeight: 'bold',
+    color: '#000000ff',
+  },
+  prompt: {
+    fontSize: 16,
+    marginBottom: 20,
+    color: '#3448faff',
+  },
+  botones: {
+    flexDirection: 'row',
+    marginBottom: 20,
+  },
+  indicador: {
+    marginVertical: 20,
+  },
+  contenido: {
+    fontSize: 18,
+    color: 'green',
+    marginTop: 10,
+    fontWeight: '600',
+  },
+});
