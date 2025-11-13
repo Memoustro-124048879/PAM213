@@ -10,6 +10,8 @@ import FSLScreen from './FSLScreen'
 import ModalScreen from './ModalScreen'
 import BSScreen from './BSScreen'
 import RepasoScreen from './RepasoScreen'
+import FLScreen from './FLScreen'
+
 
 
 export default function MenuScreen() {
@@ -29,8 +31,10 @@ export default function MenuScreen() {
         return <SVScreen />;
       case 'activityIndicator':
         return <AIScreen />;
-      case 'flatList y section list':
+      case 'FlatList':
         return <FSLScreen />;
+      case 'Section List':
+        return <FLScreen />;
       case 'modal':
         return <ModalScreen />;
       case 'bottom sheet':
@@ -49,10 +53,11 @@ export default function MenuScreen() {
                     <Button title='Pract: ImageBackgroung & SlapshScreen' onPress={()=>setScreen('imageBackgroung & slapshScreen')}/>
                     <Button title='Pract: ScrollView' onPress={()=>setScreen('scrollView')}/>
                     <Button title='Pract: ActivityIndicator' onPress={()=>setScreen('activityIndicator')}/>
-                    <Button title='Pract: FlatList y Section List' onPress={()=>setScreen('flatList y section list')}/>
+                    <Button title='Pract: Section List' onPress={()=>setScreen('Section List')}/>
                     <Button title='Pract: Modal ' onPress={()=>setScreen('modal')}/>
                     <Button title='Pract: Bottom Sheet ' onPress={()=>setScreen('bottom sheet')}/>
                     <Button title='Pract: Repaso ' onPress={()=>setScreen('repaso')}/>
+                    <Button title='Pract: FlatList' onPress={()=>setScreen('FlatList')}/>
                   </View>
                 </View>
               )
@@ -76,7 +81,7 @@ const styles = StyleSheet.create({
   },
   celdas:{
     marginTop: 15,
-    flexDirection:'frow',
+    flexDirection:'column',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 15
