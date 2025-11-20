@@ -1,9 +1,9 @@
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable, StyleSheet, Button } from "react-native";
 
 export default function Profile({ navigation }) {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Pantalla de perfil</Text>
+            <Text style={styles.title}>Perfil usuario</Text>
 
             <Pressable style={[styles.button, styles.buttonSettings]} onPress={() => navigation.navigate('Settings')}>
                 <Text style={styles.buttonText}>Ir a Configuración</Text>
